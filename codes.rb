@@ -8,7 +8,8 @@ def text_to_char(message)
     ready_text(message).split("")
 end
 def atoz()
-	atoz = ("a".."z").to_a
+	atoz = [*?a..?z]
+    
 end
 def ftoe()
 	atoz.rotate(5)
@@ -28,11 +29,11 @@ def indexed_message(message)
 end
 def encrypter(message) #rotated alphabet by 5 places
 	encrypted_arr = []
-	indexed_message(message).each do |num|
-		if num == ftoe.index
-			ftoe[num]
+	indexed_message(message).each do |number|
+		if number == ftoe.index
+			ftoe[number]
 		end
-	encrypted_arr << ftoe[num]
+	encrypted_arr << ftoe[number]
 	end
 	encrypted_arr.join
 end
@@ -51,11 +52,16 @@ def indexed_encrypted_message(message) #for decryption
 end
 def decrypter(message) #rotates back 5 places to original alphabet
 	decrypted_arr = []
-	indexed_encrypted_message(message).each do |num|
-		if num == atoz.index
-			atoz[num]
+	indexed_encrypted_message(message).each do |number|
+		if number == atoz.index
+			atoz[number]
 		end
-	decrypted_arr << atoz[num]
+	decrypted_arr << atoz[number]
 	end
 	decrypted_arr.join
 end
+
+puts decrypter("htiji")
+puts encrypter("Coded")
+
+
