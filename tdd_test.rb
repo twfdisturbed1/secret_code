@@ -13,6 +13,9 @@ class TestCodes < Minitest::Test
         assert_equal(String, string_return("Coded with .>?<?</.").class)
     
     end
+    def test_for_spaces_and_special
+        assert_equal("coded", ready_text("Coded"))
+    end
 
 
 end
