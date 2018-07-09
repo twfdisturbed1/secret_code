@@ -20,8 +20,9 @@ class TestCodes < Minitest::Test
         assert_equal("codedwith",ready_text("Coded with .>?<?<."))
     end
     def test_that_returns_individual_char
-            assert_equal(["c", "o", "d", "e", "d"],text_to_char("Coded"))
+        assert_equal(["c", "o", "d", "e", "d"],text_to_char("Coded"))
+        assert_equal(["c", "o", "d", "e", "d", "w", "i", "t", "h", "s", "p", "a", "c", "e", "s"], text_to_char("Coded with spaces"))
+        assert_equal(["c", "o", "d", "e", "d", "w", "i", "t", "h", "s", "p", "e", "c", "i", "a", "l"], text_to_char("Coded with Special."))
+        assert_equal(["c", "o", "d", "e", "d", "w", "i", "t", "h"], text_to_char("Coded with .>?<?<."))
     end
-    
-
 end
