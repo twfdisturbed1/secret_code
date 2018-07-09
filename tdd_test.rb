@@ -27,5 +27,9 @@ class TestCodes < Minitest::Test
     end
     def test_assert_atoz_returns_as_array_filled_with_alphabet
 		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
-	end
+        assert_equal(Array, atoz().class)
+    end
+    def test_assert_ftoe_returns_as_array_shifted_5
+		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
+	end	
 end
