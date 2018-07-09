@@ -35,5 +35,9 @@ class TestCodes < Minitest::Test
     end	
     def test_assert_message_returns_as_indexed_array
 		assert_equal([2, 14, 3, 4, 3], indexed_message("Coded"))
-	end
+        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7, 18, 15, 0, 2, 4, 18], indexed_message("Coded with spaces"))
+        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7, 18, 15, 4, 2, 8, 0, 11], indexed_message("Coded with special."))
+        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7], indexed_message("Coded with ./? "))
+
+    end
 end
