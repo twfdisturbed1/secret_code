@@ -13,3 +13,16 @@ end
 def ftoe()
 	atoz.rotate(5)
 end
+def indexed_message(message)
+	indexed_message_arr = []
+	text_to_char(message).each do |letters|
+		counter = 0
+		atoz.each do |letters_1|
+			if letters == letters_1
+				indexed_message_arr << counter
+			end
+			counter += 1
+		end
+	end
+	indexed_message_arr 
+end
