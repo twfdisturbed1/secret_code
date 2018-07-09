@@ -10,3 +10,6 @@ end
 def atoz()
 	atoz = ("a".."z").to_a
 end
+def ftoe()
+	atoz.rotate(5)
+end
