@@ -26,3 +26,13 @@ def indexed_message(message)
 	end
 	indexed_message_arr 
 end
+def encrypter(message) #rotated alphabet by 5 places
+	encrypted_arr = []
+	indexed_message(message).each do |num|
+		if num == ftoe.index
+			ftoe[num]
+		end
+	encrypted_arr << ftoe[num]
+	end
+	encrypted_arr.join
+end
