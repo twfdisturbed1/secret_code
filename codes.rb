@@ -7,3 +7,6 @@ end
 def text_to_char(message)
     ready_text(message).split("")
 end
+def atoz()
+	atoz = ("a".."z").to_a
+end
