@@ -56,5 +56,9 @@ class TestCodes < Minitest::Test
     end
 	def test_assert_decrypted_message_returns_as_ready_text
         assert_equal("coded", decrypter("htiji"))
-   end
+        assert_equal("codedwithspaces", decrypter("htijibnymxufhjx"))
+        assert_equal("codedwithspecial", decrypter("htijibnymxujhnfq"))
+        assert_equal("codedwith", decrypter("htijibnym"))
+      
+    end
 end
