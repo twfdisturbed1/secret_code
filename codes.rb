@@ -36,3 +36,16 @@ def encrypter(message) #rotated alphabet by 5 places
 	end
 	encrypted_arr.join
 end
+def indexed_encrypted_message(message) #for decryption
+	indexed_decrypted_msg_arr = []
+	text_to_char(message).each do |letters|
+		counter = 0
+		ftoe.each do |letters_1|
+			if letters == letters_1
+				indexed_decrypted_msg_arr << counter
+			end
+			counter += 1
+		end
+	end
+	indexed_decrypted_msg_arr
+end

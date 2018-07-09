@@ -52,6 +52,6 @@ class TestCodes < Minitest::Test
     end
     def test_assert_decrypted_message_returns_as_indexed_array
         assert_equal([2, 14, 3, 4, 3], indexed_encrypted_message("htiji"))
-        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7], text_to_char("htijibnym"))
+        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7], indexed_encrypted_message("htijibnym"))
     end
 end
