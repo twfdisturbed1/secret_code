@@ -19,6 +19,9 @@ class TestCodes < Minitest::Test
         assert_equal("codedwithspecial",ready_text("Coded with Special."))
         assert_equal("codedwith",ready_text("Coded with .>?<?<."))
     end
-
+    def test_that_returns_individual_char
+            assert_equal(["c", "o", "d", "e", "d"],text_to_char("Coded"))
+    end
+    
 
 end
