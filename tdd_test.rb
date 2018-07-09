@@ -25,4 +25,7 @@ class TestCodes < Minitest::Test
         assert_equal(["c", "o", "d", "e", "d", "w", "i", "t", "h", "s", "p", "e", "c", "i", "a", "l"], text_to_char("Coded with Special."))
         assert_equal(["c", "o", "d", "e", "d", "w", "i", "t", "h"], text_to_char("Coded with .>?<?<."))
     end
+    def test_assert_atoz_returns_as_array_filled_with_alphabet
+		assert_equal(["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], atoz())
+	end
 end
