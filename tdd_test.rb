@@ -46,4 +46,12 @@ class TestCodes < Minitest::Test
         assert_equal("htijibnymxujhnfq", encrypter("Coded with special"))
         assert_equal("htijibnym", encrypter("Coded with ./?"))
     end
+    def test_assert_decrypted_message_returns_as_individual_characters
+		assert_equal(["h", "t", "i", "j", "i"], text_to_char("htiji"))
+    	assert_equal(["h", "t", "i", "j", "i", "b", "n", "y", "m"], text_to_char("htijibnym"))
+    end
+    def test_assert_decrypted_message_returns_as_indexed_array
+        assert_equal([2, 14, 3, 4, 3], indexed_encrypted_message("htiji"))
+        assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7], text_to_char("htijibnym"))
+    end
 end
