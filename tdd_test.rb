@@ -8,6 +8,6 @@ class TestCodes < Minitest::Test
     end
 
     def test_to_return_string
-        assert_equal(String, string_return().class)
+        assert_equal(String, string_return("Coded").class)
     end
 end
