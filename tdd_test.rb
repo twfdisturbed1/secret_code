@@ -7,4 +7,7 @@ class TestCodes < Minitest::Test
         assert_equal(1, 1)
     end
 
+    def test_to_return_string
+        assert_equal(String, string_return().class)
+    end
 end
