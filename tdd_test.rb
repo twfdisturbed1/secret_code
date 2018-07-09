@@ -31,5 +31,9 @@ class TestCodes < Minitest::Test
     end
     def test_assert_ftoe_returns_as_array_shifted_5
 		assert_equal(["f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "a", "b", "c", "d", "e"], ftoe())
-	end	
+        assert_equal(Array, ftoe().class)
+    end	
+    def test_assert_message_returns_as_indexed_array
+		assert_equal([2, 14, 3, 4, 3], indexed_message("Coded"))
+	end
 end
