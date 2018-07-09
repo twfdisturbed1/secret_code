@@ -40,4 +40,10 @@ class TestCodes < Minitest::Test
         assert_equal([2, 14, 3, 4, 3, 22, 8, 19, 7], indexed_message("Coded with ./? "))
 
     end
+    def test_assert_indexed_message_returns_as_encrypted_secret_code
+        assert_equal("htiji", encrypter("Coded"))
+        assert_equal("htijibnymxufhjx", encrypter("Coded with spaces."))
+        assert_equal("htijibnymxujhnfq", encrypter("Coded with special"))
+        assert_equal("htijibnym", encrypter("Coded with ./?"))
+    end
 end
